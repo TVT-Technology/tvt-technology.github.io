@@ -3,30 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TVT Technology</title>
+  <title>TVT Technology — Simple, useful mobile apps</title>
+  <meta name="description" content="TVT Technology builds simple, useful mobile apps: Scanly (QR & Barcode Scanner) and Color IQ." />
   <style>
+    :root {
+      --brand: #0058F9;
+      --ink: #10182b;
+      --muted: #5b667a;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); }
+
+    header {
+      background: linear-gradient(160deg, var(--brand), #003bb0);
+      color: #fff;
+      text-align: center;
+      padding: 72px 24px 88px;
+    }
+    header h1 { font-size: 2.4rem; margin: 0 0 8px; }
+    header p { margin: 0; opacity: 0.9; font-size: 1.15rem; }
+
+    main {
+      max-width: 880px;
+      margin: -48px auto 0;
+      padding: 0 20px 48px;
+    }
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .app-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(16, 24, 43, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0058F9;
+      font-size: 28px;
+      margin-bottom: 16px;
       color: #fff;
-      text-align: center;
     }
-    .card { padding: 32px; }
-    h1 { font-size: 2rem; margin-bottom: 8px; }
-    p { opacity: 0.85; line-height: 1.6; }
-    a { color: #fff; font-weight: 600; }
+    img.app-icon { object-fit: cover; }
+    .icon-coloriq { background: linear-gradient(135deg, #ff5e62, #f9a825, #43a047, #1e88e5); }
+    .app-card h2 { margin: 0 0 4px; font-size: 1.3rem; }
+    .app-card .tagline { color: var(--muted); margin: 0 0 12px; font-size: 0.95rem; }
+    .app-card p { margin: 0 0 16px; color: var(--muted); }
+    .app-card .links { margin-top: auto; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .btn:hover { background: #0047cc; }
+    .badge {
+      display: inline-block;
+      background: #eef2f9;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .privacy-link { font-size: 0.9rem; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 24px 20px 40px;
+    }
+    footer a { color: var(--muted); }
   </style>
 </head>
 <body>
-  <div class="card">
+  <header>
     <h1>TVT Technology</h1>
     <p>We build simple, useful mobile apps.</p>
-    <p><a href="https://play.google.com/store/apps/details?id=com.tvttechnology.scanly">Scanly — QR &amp; Barcode Scanner</a></p>
-  </div>
+  </header>
+
+  <main>
+    <div class="apps">
+      <div class="app-card">
+        <img class="app-icon" src="https://play-lh.googleusercontent.com/vPGsEiqScdOrzRHecb28V6y9kkdZ34JCB_Y0xosPQI_KmPR74hvtDfkgIDxEbjsBKmqNegG9S7xgEC2OQsRhrA=w480-h960-rw" alt="Scanly app icon" width="56" height="56" loading="lazy" />
+        <h2>Scanly</h2>
+        <p class="tagline">QR &amp; Barcode Scanner</p>
+        <p>Scan any QR code or barcode instantly. Fast, lightweight, and easy to use — point your camera and get the result right away.</p>
+        <div class="links">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.tvttechnology.scanly">Get it on Google Play</a>
+          <a class="privacy-link" href="privacy/scanly.html">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon icon-coloriq">◑</div>
+        <h2>Color IQ</h2>
+        <p class="tagline">Test &amp; train your color perception</p>
+        <p>Challenge your eyes with fun color puzzles. Find the odd shade, sharpen your color vision, and see how high your Color IQ can go.</p>
+        <div class="links">
+          <span class="badge">Coming soon to Google Play</span>
+          <a class="privacy-link" href="privacy/color-iq.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 TVT Technology · <a href="mailto:thongdn.it@gmail.com">thongdn.it@gmail.com</a></p>
+  </footer>
 </body>
 </html>
